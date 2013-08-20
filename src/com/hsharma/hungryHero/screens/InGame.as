@@ -50,6 +50,21 @@ package com.hsharma.hungryHero.screens
 	 */
 	public class InGame extends Sprite
 	{
+		// ------------------------------------------------------
+		// fsk's edit
+		// ------------------------------------------------------
+		
+		
+		private var button1:Button;
+		
+		
+		private var button2:Button;
+		
+		// ------------------------------------------------------
+		// end of fsk's edit
+		// ------------------------------------------------------
+		
+		
 		/** Game background object. */
 		private var bg:GameBackground;
 		
@@ -337,6 +352,34 @@ package com.hsharma.hungryHero.screens
 			
 			// Create items, add them to pool and place them outside the stage area.
 			createFoodItemsPool();
+			
+			// aji edit *********************
+			button1 = new Button(Assets.getAtlas().getTexture("welcome_playButton"));
+			button1.x = 640;
+			button1.y = 340;
+			button1.addEventListener(Event.TRIGGERED, onButton1Click);
+			this.addChild(button1);
+			
+			button2 = new Button(Assets.getAtlas().getTexture("welcome_aboutButton"));
+			button2.x = 460;
+			button2.y = 460;
+			button2.addEventListener(Event.TRIGGERED, onButton2Click);
+			this.addChild(button2);
+			
+			
+			
+		}
+		
+		private function onButton1Click(event:Event):void
+		{
+			hero.x = button1.x;
+			hero.y = button1.y;
+		}
+		
+		private function onButton2Click(event:Event):void
+		{
+			hero.x = button2.x;
+			hero.y = button2.y;
 		}
 		
 		/**
@@ -605,7 +648,7 @@ package com.hsharma.hungryHero.screens
 			bg.state = GameConstants.GAME_STATE_IDLE;
 			
 			// Reset background speed.
-			bg.speed = 0;
+			//bg.speed = 0;
 			
 			// Hide the pause button since the game isn't started yet.
 			pauseButton.visible = false;
@@ -673,10 +716,13 @@ package com.hsharma.hungryHero.screens
 		 */
 		private function onTouch(event:TouchEvent):void
 		{
+			
 			touch = event.getTouch(stage);
 			
-			touchX = touch.globalX;
-			touchY = touch.globalY;
+			//if(touch.globalX < stage.stageWidth)
+				//touchX = touch.globalX;
+			//if(	touch.globalY < stage.stageHeight)
+				//touchY = touch.globalY;
 		}
 		
 		/**
@@ -717,7 +763,7 @@ package com.hsharma.hungryHero.screens
 							hero.y -= (hero.y - touchY) * 0.1;
 							
 							playerSpeed += (GameConstants.HERO_MIN_SPEED - playerSpeed) * 0.05;
-							bg.speed = playerSpeed * elapsed;
+							//bg.speed = playerSpeed * elapsed;
 						}
 						else
 						{
@@ -825,14 +871,14 @@ package com.hsharma.hungryHero.screens
 						// If we have a coffee, reduce the value of the power.
 						if (coffee > 0) coffee -= elapsed;
 						
-						playerSpeed -= (playerSpeed - GameConstants.HERO_MIN_SPEED) * 0.01;
+						//playerSpeed -= (playerSpeed - GameConstants.HERO_MIN_SPEED) * 0.01;
 						
 						// Create food items.
 						setFoodItemsPattern();
-						createFoodItemsPattern();
+						//createFoodItemsPattern();
 						
 						// Create obstacles.
-						initObstacle();
+						//initObstacle();
 						
 						// Store the hero's current x and y positions (needed for animations below).
 						heroX = hero.x;
@@ -840,12 +886,12 @@ package com.hsharma.hungryHero.screens
 						
 						// Animate elements.
 						animateFoodItems();
-						animateObstacles();
+						//animateObstacles();
 						animateEatParticles();
 						animateWindParticles();
 						
 						// Set the background's speed based on hero's speed.
-						bg.speed = playerSpeed * elapsed;
+						//bg.speed = playerSpeed * elapsed;
 						
 						// Calculate maximum distance travelled.
 						scoreDistance += (playerSpeed * elapsed) * 0.1;
@@ -917,7 +963,7 @@ package com.hsharma.hungryHero.screens
 						}
 						
 						// Set the background's speed based on hero's speed.
-						bg.speed = Math.floor(playerSpeed * elapsed);
+						//bg.speed = Math.floor(playerSpeed * elapsed);
 						
 						break;
 				}

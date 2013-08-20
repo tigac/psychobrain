@@ -23,6 +23,9 @@ package
 	 */
 	public class GameConstants
 	{
+		// Debug section
+		public static const ENABLE_DEBUG:Boolean = true;
+		
 		// Player's states - what is the player doing? -------------
 		
 		public static const GAME_STATE_IDLE:int = 0;

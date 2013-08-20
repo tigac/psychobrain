@@ -34,7 +34,7 @@ package com.hsharma.hungryHero.gameElements
 		private var bgLayer4:BgLayer;
 		
 		/** Current speed of animation of the background. */
-		private var _speed:Number = 0;
+		//private var _speed:Number = 0;
 		
 		/** State of the game. */		
 		private var _state:int;
@@ -74,7 +74,7 @@ package com.hsharma.hungryHero.gameElements
 			this.addChild(bgLayer4);
 			
 			// Start animating the background.
-			this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
+			//this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 		}
 		
 		/**
@@ -87,32 +87,32 @@ package com.hsharma.hungryHero.gameElements
 			if (!gamePaused)
 			{
 				// Background 1 - Sky
-				bgLayer1.x -= Math.ceil(_speed * bgLayer1.parallaxDepth);
+				//bgLayer1.x -= Math.ceil(_speed * bgLayer1.parallaxDepth);
 				// Hero flying left
-				if (bgLayer1.x > 0) bgLayer1.x = -stage.stageWidth;
+				//if (bgLayer1.x > 0) bgLayer1.x = -stage.stageWidth;
 				// Hero flying right
-				if (bgLayer1.x < -stage.stageWidth ) bgLayer1.x = 0;
-				
+				//if (bgLayer1.x < -stage.stageWidth ) bgLayer1.x = 0;
+				//
 				// Background 2 - Hills
-				bgLayer2.x -= Math.ceil(_speed * bgLayer2.parallaxDepth);
+				//bgLayer2.x -= Math.ceil(_speed * bgLayer2.parallaxDepth);
 				// Hero flying left
-				if (bgLayer2.x > 0) bgLayer2.x = -stage.stageWidth;
+				//if (bgLayer2.x > 0) bgLayer2.x = -stage.stageWidth;
 				// Hero flying right
-				if (bgLayer2.x < -stage.stageWidth ) bgLayer2.x = 0;
-				
+				//if (bgLayer2.x < -stage.stageWidth ) bgLayer2.x = 0;
+				//
 				// Background 3 - Buildings
-				bgLayer3.x -= Math.ceil(_speed * bgLayer3.parallaxDepth);
+				//bgLayer3.x -= Math.ceil(_speed * bgLayer3.parallaxDepth);
 				// Hero flying left
-				if (bgLayer3.x > 0) bgLayer3.x = -stage.stageWidth;
+				//if (bgLayer3.x > 0) bgLayer3.x = -stage.stageWidth;
 				// Hero flying right
-				if (bgLayer3.x < -stage.stageWidth ) bgLayer3.x = 0;
-				
+				//if (bgLayer3.x < -stage.stageWidth ) bgLayer3.x = 0;
+				//
 				// Background 4 - Trees
-				bgLayer4.x -= Math.ceil(_speed * bgLayer4.parallaxDepth);
+				//bgLayer4.x -= Math.ceil(_speed * bgLayer4.parallaxDepth);
 				// Hero flying left
-				if (bgLayer4.x > 0) bgLayer4.x = -stage.stageWidth;
+				//if (bgLayer4.x > 0) bgLayer4.x = -stage.stageWidth;
 				// Hero flying right
-				if (bgLayer4.x < -stage.stageWidth ) bgLayer4.x = 0;
+				//if (bgLayer4.x < -stage.stageWidth ) bgLayer4.x = 0;
 			}
 		}
 		
@@ -136,7 +136,7 @@ package com.hsharma.hungryHero.gameElements
 		 * Speed of the hero.
 		 * 
 		 */
-		public function get speed():Number { return _speed; }
-		public function set speed(value:Number):void { _speed = value; }
+		//public function get speed():Number { return _speed; }
+		//public function set speed(value:Number):void { _speed = value; }
 	}
 }

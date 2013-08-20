@@ -57,7 +57,7 @@ package
 			myStarling.antiAliasing = 1;
 			
 			// Show statistics for memory usage and fps.
-			myStarling.showStats = true;
+			myStarling.showStats = GameConstants.ENABLE_DEBUG;
 			
 			// Position stats.
 			myStarling.showStatsAt("left", "bottom");
