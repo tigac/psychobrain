@@ -13,6 +13,7 @@
 
 package 
 {
+	//asdasdasd
 	import flash.display.Bitmap;
 	import flash.utils.Dictionary;
 	
